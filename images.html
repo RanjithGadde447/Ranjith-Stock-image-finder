@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranjith Stock Image Finder</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Ranjith Stock Image Finder</h1>
+    <p>Live Pexels/Pixabay API + Smart Tags + Instant Downloads</p>
+  </header>
+
+  <div class="container">
+    <div class="search-row">
+      <input type="text" id="search-input" class="search-input" placeholder="Search for images...">
+      <button id="search-button" class="search-button">Search</button>
+      <button id="generate-tags" class="generate-tags-button">Generate Tags</button>
+    </div>
+    <div id="tags" class="tag-output"></div>
+
+    <div class="filters">
+      <div class="filter-group">
+        <label for="orientation">Orientation</label>
+        <select id="orientation">
+          <option value="any">Any</option>
+          <option value="landscape">Landscape</option>
+          <option value="portrait">Portrait</option>
+          <option value="square">Square</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="color">Color</label>
+        <select id="color">
+          <option value="any">Any</option>
+          <option value="black">Black</option>
+          <option value="white">White</option>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="yellow">Yellow</option>
+          <option value="orange">Orange</option>
+          <option value="purple">Purple</option>
+          <option value="brown">Brown</option>
+          <option value="pink">Pink</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="size">Size</label>
+        <select id="size">
+          <option value="any">Any Size</option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="loading" id="loading"><p>Loading...</p></div>
+    <div class="results" id="results"></div>
+    
+    <!-- Add pagination controls -->
+    <div class="pagination">
+      <button id="load-more" class="load-more-button">Load More Results</button>
+      <p id="page-info" class="page-info">Page <span id="current-page">1</span></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Free Stock Image Finder | Powered by Pexels / Pixabay API</p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
