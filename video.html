@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranjith Stock Footage Finder</title>
+  <!-- Link to external FontAwesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Link to your custom CSS file -->
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Ranjith Stock Footage Finder</h1>
+    <p>Live Pexels/Pixabay API + Smart Tags + Instant Downloads</p>
+  </header>
+
+  <div class="container">
+    <div class="search-row">
+      <input type="text" id="search-input" class="search-input" placeholder="Search for videos...">
+      <button id="search-button" class="search-button">Search</button>
+      <button id="generate-tags" class="generate-tags-button">Generate Tags</button>
+    </div>
+    <div id="tags" class="tag-output"></div>
+
+    <div class="filters">
+      <div class="filter-group">
+        <label for="resolution">Resolution</label>
+        <select id="resolution">
+          <option value="any">Any</option>
+          <option value="4k">4K</option>
+          <option value="2k">2K</option>
+          <option value="fhd">FHD</option>
+          <option value="hd">HD</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="duration">Duration</label>
+        <select id="duration">
+  <option value="any">Any</option>
+  <option value="very-short">Very Short (8-15s)</option>
+  <option value="short">Short (&lt; 30s)</option>
+  <option value="medium">Medium (30s-2min)</option>
+  <option value="long">Long (&gt; 2min)</option>
+</select>
+      </div>
+      <div class="filter-group">
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="any">Any</option>
+          <option value="nature">Nature</option>
+          <option value="people">People</option>
+          <option value="urban">Urban</option>
+          <option value="business">Business</option>
+          <option value="technology">Technology</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="sort">Sort By</label>
+        <select id="sort">
+          <option value="relevance">Relevance</option>
+          <option value="newest">Newest</option>
+          <option value="popular">Most Popular</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="usage-rights">Usage Rights</label>
+        <select id="usage-rights">
+          <option value="any">Any</option>
+          <option value="free">Free</option>
+          <option value="commercial">Commercial</option>
+          <option value="attribution">Attribution</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="sources">
+      <label class="source-checkbox"><input type="checkbox" checked id="pexels"> Pexels</label>
+      <label class="source-checkbox"><input type="checkbox" checked id="pixabay"> Pixabay</label>
+      <label class="source-checkbox"><input type="checkbox" checked id="videvo"> Videvo</label>
+      <label class="source-checkbox"><input type="checkbox" checked id="coverr"> Coverr</label>
+      <label class="source-checkbox"><input type="checkbox" checked id="videezy"> Videezy</label>
+    </div>
+
+    <div class="loading" id="loading"><p>Loading...</p></div>
+    <div class="results" id="results"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Free Stock Footage Finder | Powered by Pexels / Pixabay API</p>
+  </footer>
+
+  <!-- Link to your custom JavaScript file -->
+  <script src="scripts/script.js"></script>
+</body>
+</html>
